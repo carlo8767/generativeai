@@ -7,12 +7,16 @@ if __name__ == '__main__':
   print("Hello")
   # THERE ARE MULTIPLE COMMAND FOR PANDAS https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html # apt update; apt install git
 
-  file = ps.read_csv(filename, skiprows=5)
-  print(file.columns)
-  print(file.Year.unique())
+  new_colum = ['Year', 'City', 'Sports', 'Discipline', 'Athletes Names', 'NOC', 'Gender',
+               'Event', 'Event Gender', 'Medal', 'Position']
+  file = ps.read_csv(filename, skiprows=5, names=new_colum, header=0)
+  print(file)
+
+
 
 
   """
+  {1}
   OTHER USEFUL METHOD
   file.sample() random 3 row
   print(file.sample(5)) # RANDOMLY SHOW ROW
@@ -24,6 +28,7 @@ if __name__ == '__main__':
   """
 
   """
+  {2}
   SELECT A SERIES I CAN ACCESS DIRECTLY WITH AN ATTRIBUTE
    print(file.columns) VISUALIZE ALL THE COLUMNS
   print(file.Year.unique()) # PRINT UNIQUE
@@ -32,7 +37,22 @@ if __name__ == '__main__':
   print(file[s].unique())
   print(file.Year.value_counts(normalize=True)) # COUNT 
   oo.Medal.value_counts() # COUNT
+  """
 
+  """
+   {2}
+   RENAME A SERIES
+   mapper = {"Athlete Name": "Athlete_Name" }
+   file = file.rename(columns=mapper) # YOU CAN COMBINING AS WELL, AND YOU CAN SPECIFY DIRECTY THE DICTIONARY IN COLUMNS
+   file.info()
+   file.columns = columns
+   YOU CAN RENAME THE COLUMS DIRECTLY IN THE READ CSV
+    new_colum = ['Year', 'City', 'Sports', 'Discipline', 'Athletes Names', 'NOC', 'Gender',
+               'Event', 'Event Gender', 'Medal', 'Position']
+  file = ps.read_csv(filename, skiprows=5, names=new_colum, header=0)
+
+  
+  
   """
 
   # SEP separate the file for a specific char
