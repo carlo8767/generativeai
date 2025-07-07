@@ -17,6 +17,8 @@ if __name__ == '__main__':
 
   """
   {1}
+   ps.set_option("display.max_columns", None)  # show all columns
+   ps.set_option("display.width", None)
   OTHER USEFUL METHOD
   file.sample() random 3 row
   print(file.sample(5)) # RANDOMLY SHOW ROW
