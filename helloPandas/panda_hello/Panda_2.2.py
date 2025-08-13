@@ -14,7 +14,8 @@ if __name__ == '__main__':
    IN PANDAS WE REFERS WITH AXIS 0 THE ROW WHILE THE COLUMN HAVE AXIS 1 
    oo.drop("Position", axis = 1) THIS IS NOT SUFFICIENT TO UPDATE THE DATA
    ps.read_csv("olympics_1896_2004.csv", skiprows=5, implace = True).oo.drop("Position", axis = 1) 
-   Together and also without assign the variable. However, if you use implace you cannot manipulate the data another time
+   Together and also without assign the variable. However, 
+   if you use implace you cannot manipulate the data another time
    Get rid of raw 2 oo = oo.drop(2, axis = 0)
    oo = oo.drop([0,,1,2], axis = 0) BETTER USE A CHAIN APPROACH 
    {2}  

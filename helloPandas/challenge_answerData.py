@@ -4,7 +4,7 @@ import pandas as ps
 
 
 if __name__ == '__main__':
-    filename = "olympics_1896_2004.csv"
+    filename = "panda_hello/olympics_1896_2004.csv"
     oo = ps.read_csv(filename, skiprows=5)
 
     # WHAT IS THE TIME RANGE COVERED IN THIS DATA SET?
